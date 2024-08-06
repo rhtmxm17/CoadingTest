@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "점 찍기", "점 찍기\�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "숫자 짝꿍", "숫자 짝꿍\숫자 짝꿍.csproj", "{919C2AEE-5722-4814-9613-FFA8F9CDA1EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "타겟 넘버", "타겟 넘버\타겟 넘버.csproj", "{B7F52527-5EC7-45A5-AA4E-85AD2C9B2CA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "혼자 놀기의 달인", "혼자 놀기의 달인\혼자 놀기의 달인.csproj", "{A37ED3A8-58DE-4CC9-A0A7-D3BCD96DC55E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{919C2AEE-5722-4814-9613-FFA8F9CDA1EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{919C2AEE-5722-4814-9613-FFA8F9CDA1EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{919C2AEE-5722-4814-9613-FFA8F9CDA1EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7F52527-5EC7-45A5-AA4E-85AD2C9B2CA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7F52527-5EC7-45A5-AA4E-85AD2C9B2CA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7F52527-5EC7-45A5-AA4E-85AD2C9B2CA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F52527-5EC7-45A5-AA4E-85AD2C9B2CA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A37ED3A8-58DE-4CC9-A0A7-D3BCD96DC55E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A37ED3A8-58DE-4CC9-A0A7-D3BCD96DC55E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A37ED3A8-58DE-4CC9-A0A7-D3BCD96DC55E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A37ED3A8-58DE-4CC9-A0A7-D3BCD96DC55E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

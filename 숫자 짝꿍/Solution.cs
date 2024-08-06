@@ -20,9 +20,9 @@ public class Solution
             digitY[c - '0']++;
         }
 
-        for (int i = 10 - 1; i >= 0; i--)
+        for (int i = 10 - 1; i >= 0; i--) // 가장 큰 정수를 만들어야 하므로 큰 값부터 사용한다
         {
-            int pair = (digitX[i] < digitY[i]) ? digitX[i] : digitY[i];
+            int pair = (digitX[i] < digitY[i]) ? digitX[i] : digitY[i]; // 해당 숫자가 덜 등장한 쪽
 
             for (int j = 0; j < pair; j++)
                 sb.Append(i);
