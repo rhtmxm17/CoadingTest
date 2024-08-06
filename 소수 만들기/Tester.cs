@@ -5,7 +5,7 @@
         static void Main()
         {
             Solution sol = new();
-            Console.Write(sol.solution(new int[] { 1, 2, 3, 4 }));
+            Console.Write(sol.solution([1, 2, 3, 4]));
         }
     }
 }
