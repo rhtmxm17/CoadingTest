@@ -7,13 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "소수 만들기", "소수 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "점 찍기", "점 찍기\점 찍기.csproj", "{9AB1C900-1A2B-4083-B5E0-A40AEEA60D6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "숫자 짝꿍", "숫자 짝꿍\숫자 짝꿍.csproj", "{919C2AEE-5722-4814-9613-FFA8F9CDA1EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "숫자 짝꿍", "숫자 짝꿍\숫자 짝꿍.csproj", "{919C2AEE-5722-4814-9613-FFA8F9CDA1EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "타겟 넘버", "타겟 넘버\타겟 넘버.csproj", "{B7F52527-5EC7-45A5-AA4E-85AD2C9B2CA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "타겟 넘버", "타겟 넘버\타겟 넘버.csproj", "{B7F52527-5EC7-45A5-AA4E-85AD2C9B2CA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "혼자 놀기의 달인", "혼자 놀기의 달인\혼자 놀기의 달인.csproj", "{A37ED3A8-58DE-4CC9-A0A7-D3BCD96DC55E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "혼자 놀기의 달인", "혼자 놀기의 달인\혼자 놀기의 달인.csproj", "{A37ED3A8-58DE-4CC9-A0A7-D3BCD96DC55E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "금과 은 운반하기", "금과 은 운반하기\금과 은 운반하기.csproj", "{920C3DBB-64C5-4B32-8CD8-3B400754BC82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "금과 은 운반하기", "금과 은 운반하기\금과 은 운반하기.csproj", "{920C3DBB-64C5-4B32-8CD8-3B400754BC82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "올바른 괄호의 갯수", "올바른 괄호의 갯수\올바른 괄호의 갯수.csproj", "{AF1EC1F8-763C-4D9D-A699-D167703C3483}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{920C3DBB-64C5-4B32-8CD8-3B400754BC82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{920C3DBB-64C5-4B32-8CD8-3B400754BC82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{920C3DBB-64C5-4B32-8CD8-3B400754BC82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF1EC1F8-763C-4D9D-A699-D167703C3483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF1EC1F8-763C-4D9D-A699-D167703C3483}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF1EC1F8-763C-4D9D-A699-D167703C3483}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF1EC1F8-763C-4D9D-A699-D167703C3483}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
