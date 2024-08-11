@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "금과 은 운반하기", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "올바른 괄호의 갯수", "올바른 괄호의 갯수\올바른 괄호의 갯수.csproj", "{AF1EC1F8-763C-4D9D-A699-D167703C3483}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "미로 탈출", "미로 탈출\미로 탈출.csproj", "{7E7E784F-AB75-426A-A815-8DC1412BF992}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "게임 맵 탐색", "게임 맵 탐색\게임 맵 탐색.csproj", "{6C5C457B-A4AD-48D7-9288-D66E8AB2F0D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "게임 맵 탐색", "게임 맵 탐색\게임 맵 탐색.csproj", "{6C5C457B-A4AD-48D7-9288-D66E8AB2F0D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "미로 탈출 명령어", "미로 탈출 명령어\미로 탈출 명령어.csproj", "{0A578F29-DCA8-41F6-9CB7-EFD9C0712C03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,14 +55,14 @@ Global
 		{AF1EC1F8-763C-4D9D-A699-D167703C3483}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF1EC1F8-763C-4D9D-A699-D167703C3483}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF1EC1F8-763C-4D9D-A699-D167703C3483}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7E7E784F-AB75-426A-A815-8DC1412BF992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E7E784F-AB75-426A-A815-8DC1412BF992}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E7E784F-AB75-426A-A815-8DC1412BF992}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7E7E784F-AB75-426A-A815-8DC1412BF992}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6C5C457B-A4AD-48D7-9288-D66E8AB2F0D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6C5C457B-A4AD-48D7-9288-D66E8AB2F0D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C5C457B-A4AD-48D7-9288-D66E8AB2F0D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C5C457B-A4AD-48D7-9288-D66E8AB2F0D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A578F29-DCA8-41F6-9CB7-EFD9C0712C03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A578F29-DCA8-41F6-9CB7-EFD9C0712C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A578F29-DCA8-41F6-9CB7-EFD9C0712C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A578F29-DCA8-41F6-9CB7-EFD9C0712C03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
