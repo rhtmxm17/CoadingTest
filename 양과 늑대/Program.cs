@@ -2,18 +2,59 @@
 
 public class Solution
 {
+    const int LargeByteOne = 0x40000000;
+
     public class Node
     {
+        public int number;
         public bool isSheep = false;
-        public int childSheep = 0;  // 해당 분기에 포함된 모든 양 개수
-        public int childWolf = 1;   // 해당 분기에 포함된 모든 늑대 개수
-        public Node? parent = null;
-        public Node? left = null;
-        public Node? right = null;
+        private Node parent = null;
+
+        // 부모노드 변경시 우선순위 갱신
+        public Node Parent
+        {
+            get => parent;
+            set
+            {
+                if (parent == value)
+                    return;
+
+                if (parent != null)
+                {
+                    int subScore = this.score;
+
+                    for (Node subFrom = parent; subFrom != null; subFrom = subFrom.Parent)
+                    {
+                        subScore >>= 2;
+
+                        subFrom.score -= subScore;
+                    }
+                }
+
+                if (value != null)
+                {
+                    int addScore = this.score;
+
+                    for (Node addTo = value; addTo != null; addTo = addTo.Parent)
+                    {
+                        addScore >>= 2;
+
+                        addTo.score += addScore;
+                    }
+                }
+
+                parent = value;
+            }
+        }
+        public Node left = null;
+        public Node right = null;
+
+        // 우선순위
+        public int score = 0;
     }
 
     // 좌우를 비교해서 우선순위가 높은 노드를 당겨올림
-    public Node? PullUp(Node node, Func<Node, Node, bool> super)
+    public Node PullUp(Node node, Func<Node, Node, bool> super)
     {
         if (node.left == null)
             return null;
@@ -24,41 +65,36 @@ public class Solution
             return node.left;
         }
 
+        Node higher;
+        Node lower;
         if (super(node.left, node.right))
         {
-            PullUp(node.left, super);
-
-            if (node.left.left == null)
-                node.left.left = node.right;
-            else
-                node.left.right = node.right;
-
-            node.right.parent = node.left;
-            return node.left;
+            higher = node.left;
+            lower = node.right;
         }
         else
         {
-            PullUp(node.right, super);
-
-            if (node.right.left == null)
-                node.right.left = node.left;
-            else
-                node.right.right = node.left;
-
-            node.left.parent = node.right;
-            return node.right;
+            higher = node.right;
+            lower = node.left;
         }
+
+        PullUp(higher, super);
+
+        if (higher.left == null)
+            higher.left = lower;
+        else
+            higher.right = lower;
+
+        lower.Parent = higher;
+
+        node.left = higher;
+        node.right = null;
+        return higher;
     }
 
-    public bool Priority(Node left, Node right)
+    public bool PriorityScore(Node left, Node right)
     {
-        if (left.isSheep)
-            return true;
-
-        if (right.isSheep)
-            return false;
-
-        return (left.childSheep - left.childWolf) > (right.childSheep - right.childWolf);
+        return left.score > right.score;
     }
 
     public int solution(int[] info, int[,] edges)
@@ -68,12 +104,12 @@ public class Solution
         for (int i = 0; i < info.Length; i++)
         {
             nodes[i] = new Node();
+            nodes[i].number = i;
 
             if (info[i] == 0)
             {
                 nodes[i].isSheep = true;
-                nodes[i].childSheep = 1;
-                nodes[i].childWolf = 0;
+                nodes[i].score = LargeByteOne;
             }
         }
 
@@ -83,28 +119,23 @@ public class Solution
             Node pnode = nodes[edges[i, 0]];
             Node cnode = nodes[edges[i, 1]];
 
+            // 노드 링크
             if (pnode.left == null)
                 pnode.left = cnode;
             else
                 pnode.right = cnode;
 
-            pnode.childSheep += cnode.childSheep;
-            pnode.childWolf += cnode.childWolf;
+            cnode.Parent = pnode;
 
-            for (Node? grand = pnode.parent; grand != null; grand = grand.parent)
-            {
-                grand.childSheep += cnode.childSheep;
-                grand.childWolf += cnode.childWolf;
-            }
         }
 
         // 순수 늑대 분기 폐기
         for (int i = 0; i < nodes.Length; i++)
         {
-            if (nodes[i].childSheep == 0)
+            if (nodes[i].score == 0)
             {
-                Node? parent = nodes[i].parent;
-                nodes[i].parent = null;
+                Node parent = nodes[i].Parent;
+                nodes[i].Parent = null;
 
                 if (parent == null)
                     continue;
@@ -118,19 +149,12 @@ public class Solution
                 {
                     parent.right = null;
                 }
-
-                parent.childWolf -= nodes[i].childWolf;
-                for (Node? grand = parent.parent; grand != null; grand = grand.parent)
-                {
-                    grand.childWolf -= nodes[i].childWolf;
-                }
-
             }
         }
 
         int sheepCount = 0;
         int wolfCount = 0;
-        for (Node? head = nodes[0]; head != null; head = PullUp(head, Priority))
+        for (Node head = nodes[0]; head != null; head = PullUp(head, PriorityScore))
         {
             if (head.isSheep)
                 sheepCount++;
