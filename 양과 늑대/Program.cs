@@ -2,7 +2,7 @@
 
 public class Solution
 {
-    const int LargeByteOne = 0x40000000;
+    const int LargeByteOne = 0x10000000;
 
     public class Node
     {
@@ -25,7 +25,8 @@ public class Solution
 
                     for (Node subFrom = parent; subFrom != null; subFrom = subFrom.Parent)
                     {
-                        subScore >>= 2;
+                        if (false == subFrom.isSheep)
+                            subScore >>= 2;
 
                         subFrom.score -= subScore;
                     }
@@ -37,7 +38,8 @@ public class Solution
 
                     for (Node addTo = value; addTo != null; addTo = addTo.Parent)
                     {
-                        addScore >>= 2;
+                        if(false == addTo.isSheep)
+                            addScore >>= 2;
 
                         addTo.score += addScore;
                     }
@@ -132,7 +134,7 @@ public class Solution
         // 순수 늑대 분기 폐기
         for (int i = 0; i < nodes.Length; i++)
         {
-            if (nodes[i].score == 0)
+            if (nodes[i].score <= 0)
             {
                 Node parent = nodes[i].Parent;
                 nodes[i].Parent = null;

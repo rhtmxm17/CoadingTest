@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "게임 맵 탐색", "게임
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "미로 탈출 명령어", "미로 탈출 명령어\미로 탈출 명령어.csproj", "{0A578F29-DCA8-41F6-9CB7-EFD9C0712C03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "양과 늑대", "양과 늑대\양과 늑대.csproj", "{AA3AB147-06A7-44FD-8FF3-E67C42FEA329}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "양과 늑대", "양과 늑대\양과 늑대.csproj", "{AA3AB147-06A7-44FD-8FF3-E67C42FEA329}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "마법의 엘리베이터", "마법의 엘리베이터\마법의 엘리베이터.csproj", "{66768E8C-74ED-4A37-83B5-62B24626EF38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{AA3AB147-06A7-44FD-8FF3-E67C42FEA329}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA3AB147-06A7-44FD-8FF3-E67C42FEA329}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA3AB147-06A7-44FD-8FF3-E67C42FEA329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66768E8C-74ED-4A37-83B5-62B24626EF38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66768E8C-74ED-4A37-83B5-62B24626EF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66768E8C-74ED-4A37-83B5-62B24626EF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66768E8C-74ED-4A37-83B5-62B24626EF38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
